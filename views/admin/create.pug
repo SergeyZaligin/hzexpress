@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form(method="post" action="/admin/create")
+    input(type="text" name="title" placeholder="title")
+    br
+    textarea(name="description", cols="40", rows="3" placeholder="description")
+    br
+    textarea(name="keywords", cols="40", rows="3" placeholder="keywords")
+    br
+    textarea(name="preview", cols="40", rows="3" placeholder="preview")
+    br
+    textarea(name="content", cols="40", rows="5" placeholder="content")
+    br
+    label(for="visible") Visible ?
+    input(type="checkbox", name="visible")
+    br
+    select(name="category")
+      each val, index in categories
+        option(value=val.name)= val.name
+    input(type="submit", value="send")

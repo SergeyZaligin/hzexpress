@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  img(src="/upload/09d37981a44ec804f106ca852111d4a3.png")
+  p Welcome to #{title}
+  ul
+    each val in articlesPreview
+      li
+        h2
+          a=val.title
+        p=val.preview
+  p=PagesCount
+  p=MaxCount
+  a(href="?page=1") 1
+  a(href="?page=2") 2
+  a(href="?page=3") 3
+  a(href="?page=4") 4
