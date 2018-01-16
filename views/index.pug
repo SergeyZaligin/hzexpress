@@ -8,7 +8,7 @@ block content
     each val in articlesPreview
       li
         h2
-          a(href="/view/" + val._id)=val.title
+          a(href="/articles/" + val._id)=val.title
         p=val.preview
   a(href="?page=1") начало
   - var n = 1;

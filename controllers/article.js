@@ -6,17 +6,19 @@ exports.all = function (req, res) {
             console.log(err);
             return res.sendStatus(500);
         }
-        res.render('index', { title: 'Article', articles: docs });
+        res.render('articles', { title: 'Article', articles: docs });
     });
 };
 
 exports.findById = function (req, res) {
-    Article.findById(req.params.id, function (err, doc) {
+    Article.findById(req.params.id, function (err, docs) {
         if (err) {
             console.log(err);
             return res.sendStatus(500);
         }
-        res.send(doc);
+        //res.send(doc);
+        console.log(req.params.id);
+        res.render('articles', { article: docs });
     });
 };
 

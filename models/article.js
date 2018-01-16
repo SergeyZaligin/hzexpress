@@ -10,8 +10,8 @@ exports.all = function (cb) {
 exports.findById = function (id, cb) {
     db.get().collection('article').findOne({
         _id: ObjectID(id)
-    }, function (err, doc) {
-        cb(err, doc);
+    }, function (err, docs) {
+        cb(err, docs);
     });
 };
 

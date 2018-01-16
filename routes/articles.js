@@ -4,7 +4,9 @@ var articleController = require('../controllers/article');
 
 /* Article page*/
 
-router.get('/articles', articleController.all);
+
+
+//router.get('/articles', articleController.all);
 
 router.get('/articles/:id', articleController.findById);
 

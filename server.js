@@ -51,13 +51,13 @@ app.use(bodyParser.urlencoded({
 
 
 var index = require('./routes/index');
-var article = require('./routes/article');
+var articles = require('./routes/articles');
 var uploads = require('./routes/upload');
 var admin = require('./routes/admin/controll');
 var adminCreate = require('./routes/admin/create');
 
+app.use(articles);
 app.use(index);
-app.use(article);
 app.use(uploads);
 app.use(admin);
 app.use(adminCreate);
