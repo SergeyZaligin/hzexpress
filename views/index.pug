@@ -8,10 +8,8 @@ block content
     each val in articlesPreview
       li
         h2
-          a=val.title
+          a(href="/view/" + val._id)=val.title
         p=val.preview
-  p=PagesCount
-  p=MaxCount
   a(href="?page=1") начало
   - var n = 1;
   while n <= PagesCount

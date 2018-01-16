@@ -33,7 +33,6 @@ exports.articlePreview = function (req, res) {
                 console.log(err);
                 return res.sendStatus(500);
             }
-            console.log(doc);
             res.render('index', { title: mess, articlesPreview: docs,  PagesCount: Math.ceil(doc / 2), MaxCount: doc });
         });
         
@@ -48,7 +47,6 @@ exports.articleCount = function (req, res) {
             console.log(err);
             return res.sendStatus(500);
         }
-        console.log(docs);
         res.render('index', { articlesCount: docs });
     });
 };
