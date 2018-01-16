@@ -12,7 +12,9 @@ block content
         p=val.preview
   p=PagesCount
   p=MaxCount
-  a(href="?page=1") 1
-  a(href="?page=2") 2
-  a(href="?page=3") 3
-  a(href="?page=4") 4
+  a(href="?page=1") начало
+  - var n = 1;
+  while n <= PagesCount
+    a(href="?page=" + n)=n++
+  
+  a(href="?page=" + PagesCount) конец
