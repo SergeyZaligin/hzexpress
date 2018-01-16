@@ -2,9 +2,13 @@ extends layout
 
 block content
 
-	h1 Articles
-	 
-		h1=article.title
-		p=article.content
-		a=article.category
-	p=article.comments
+  h1 Articles
+  if articles
+    ul
+      each val in articles
+        li=val.title
+  if article
+    h1=article.title
+    p=article.content
+    a=article.category
+    p=article.comments
